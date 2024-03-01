@@ -3,7 +3,7 @@
 ## En la següent activitat veurem com passar un arxiu xml a un arxiu de python.
 
 En primer lloc importarem el mòdul **minidom** del paquet estandart de pytohn **xml.dom**.
-`from xml.dom import minidom`
+```from xml.dom import minidom```
 
 Definim la variable "doc" com a importació de l'arxiu "example.xml", del que extraurem les dades que volem passar a l'arxiu python.
 `doc=minidom.parse("Practica Minidom/example.xml")`
