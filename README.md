@@ -1,6 +1,8 @@
 # xml-python
 ## Documentació de l'activitat sobre <minidom> per a l'assignatura M04 - Llenguatge de marques.
 ### En la següent activitat veurem com passar informació d'un arxiu xml a un arxiu python.
+<img src="https://github.com/alexpa03/xml-python/blob/main/python_logo.png?raw=true" alt="python_logo" width="300">
+
 ---
 En primer lloc importarem el mòdul **minidom** del paquet estandard de pytohn **xml.dom**.
 ```
