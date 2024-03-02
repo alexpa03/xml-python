@@ -1,39 +1,40 @@
 # xml-python
-### Documentació de l'activitat sobre <minidom> per a l'assignatura M04 - Llenguatge de marques.
+### Activitat per a l'assignatura de Llenguatge de Marques (M04)
+#### A continuació veurem una documentació sobre una activitat sobre com passar informació d'un arxiu xml a un arxiu python. 
 ---
-#### En la següent activitat veurem com passar informació d'un arxiu xml a un arxiu python.
+<img src="https://github.com/alexpa03/xml-python/blob/main/xml-icon.png?raw=true" alt="xml_logo" width="115"><img src="https://github.com/alexpa03/xml-python/blob/main/python_logo.png?raw=true" alt="python_logo" width="130">
+---
+> Aquesta documentació s'ha utilitzat per practicar decoració amb "markdown" en arxius de text.
 
-
-<img src="https://github.com/alexpa03/xml-python/blob/main/xml-icon.png?raw=true" alt="xml_logo" width="150"> <img src="https://github.com/alexpa03/xml-python/blob/main/python_logo.png?raw=true" alt="python_logo" width="175">
-
+> Informació sobre "markdown" extreta de --> [tutorialmarkdown.com](https://tutorialmarkdown.com/guia "markdown")
 
 ---
-En primer lloc importarem el mòdul **minidom** del paquet estandard de pytohn **xml.dom**.
+En primer lloc importarem el mòdul "**minidom**" del paquet estandard de python "**xml.dom**".
 ```
 from xml.dom import minidom
 ```
 
-Definim la variable "doc" com a importació de l'arxiu "example.xml", del que extraurem les dades que volem passar a l'arxiu python.
+Definim la variable "**doc**" com a importació de l'arxiu "**example.xml**", del que extraurem les dades que volem passar a l'arxiu python.
 ```
 doc=minidom.parse("Practica Minidom/example.xml")
 ```
 
-A continuació definim la vaiable "tag_example" per referenciar al document xml importat anteriorment. 
+A continuació definim la vaiable "**tag_example**" per referenciar al document xml importat anteriorment. 
 ```
 tag_example=doc.documentElement
 ```
 
-Amb aquesta linia de codi estem afegint a la variable "tag_people" la funció de referenciar els elements del document "example.xml" que tinguin l'etiqueta "people".
+Amb aquesta linia de codi estem afegint a la variable "**tag_people**" la funció de referenciar els elements del document "**example.xml**" que tinguin l'etiqueta "**people**".
 ```
 tag_people=tag_example.getElementsByTagName("people")[0]
 ```
 
-En aquest cas, referenciem els elements que pertanyen a l'etiqueta "person" mitjançant la definició d'aquesta nova variable "llista_tag_person". La variable "tag_people" està actuant d'etiqueta pare, de forma que s'està buscant el contingut que hi ha dins d'aquesta.
+En aquest cas, referenciem els elements que pertanyen a l'etiqueta "**person**" mitjançant la definició d'aquesta nova variable "**llista_tag_person**". La variable "**tag_people**" està actuant d'etiqueta pare, de forma que s'està buscant el contingut que hi ha dins d'aquesta.
 ```
 lista_tag_person=tag_people.getElementsByTagName("person")
 ```
 
-Posteriorment, amb el "for" indiquem que es cerquin els elements dins del contingut que s'estableix en la variable "llista_tag_person". D'aquesta forma podrem realitzar certes accions amb aquests elements. 
+Posteriorment, amb el "**for**" indiquem que es cerquin els elements dins del contingut que s'estableix en la variable "**llista_tag_person**". D'aquesta forma podrem realitzar certes accions amb aquests elements. 
 ```
 for tag_person in lista_tag_person:
 ```
