@@ -1,5 +1,5 @@
 # xml-python
-### Activitat per a l'assignatura de Llenguatge de Marques (M04)
+### | Activitat per a l'assignatura de Llenguatge de Marques (M04) |
 #### A continuació veurem una documentació sobre una activitat sobre com passar informació d'un arxiu xml a un arxiu python. 
 ---
 <img src="https://github.com/alexpa03/xml-python/blob/main/xml-icon.png?raw=true" alt="xml_logo" width="115"><img src="https://github.com/alexpa03/xml-python/blob/main/python_logo.png?raw=true" alt="python_logo" width="130">
@@ -8,6 +8,30 @@
 > Informació sobre "markdown" extreta de --> [tutorialmarkdown.com](https://tutorialmarkdown.com/guia "markdown")
 
 ---
+El contongut de l'arxiu "**example.xml**" del que s'extreu la informació durant l'activitat és el següent:
+
+```
+<?xml version="1.0"?>
+<example>
+    <company>OpenAI</company>
+    <people>
+        <person id="P001">
+            <name gender="male">John</name>
+            <age>30</age>
+            <naixement>1985-11-24</naixement>
+        </person>
+
+        <person id="P002">
+            <name gender="female">Jane</name>
+            <age>21</age>
+            <naixement>2002-05-11</naixement>
+        </person>
+    </people>
+</example>
+```
+---
+## Procés
+
 En primer lloc importarem el mòdul "**minidom**" del paquet estandard de python "**xml.dom**".
 ```
 from xml.dom import minidom
@@ -48,7 +72,14 @@ Finalment, realiztem el mateix process constantment definint diferents variables
     print(f"L'edat és {valor_age}")
     print(f"La data de naixement és {valor_naixement}")
     print("----------------------------------")
-   > Tot aquest contingut es localitza dintre del "**for**" mencionat anteriorment. 
+   > Tot aquest contingut es localitza dins del "**for**" mencionat anteriorment. 
 
-* El resultat del programa seria el següent:
+
+Com a resultat, el programa en python mostrarà les dades de les persones enregistrades en l'arxiu xml que hi ha al principi del document:
+
+<img src="https://github.com/alexpa03/xml-python/blob/main/programa.png?raw=true)https://github.com/alexpa03/xml-python/blob/main/programa.png?raw=true" alt="programa" width="600">
+
+## Conclusió
+
+Aquesta activitat m'ha fet aprendre a treballar amb fitxers xml a Python mitjançant l'ús del paquet "minidom". A més, he conegut formes molt eficients de navegar per la informació dels fitxers, així com a adonar-me de la importància de la jerarquia de les dades i dels elements.
     
