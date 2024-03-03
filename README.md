@@ -1,4 +1,4 @@
-# xml-python
+# Repositori xml-python d'Alejandro Pelaez Almoguera, de 1er DAW
 ### | Activitat per a l'assignatura de Llenguatge de Marques (M04) |
 #### A continuació veurem una documentació sobre una activitat sobre com passar informació d'un arxiu xml a un arxiu python. 
 ---
