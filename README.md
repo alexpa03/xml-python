@@ -4,7 +4,6 @@
 ---
 <img src="https://github.com/alexpa03/xml-python/blob/main/xml-icon.png?raw=true" alt="xml_logo" width="115"><img src="https://github.com/alexpa03/xml-python/blob/main/python_logo.png?raw=true" alt="python_logo" width="130">
 ---
-> Aquesta documentació s'ha utilitzat per practicar decoració amb "markdown" en arxius de text.
 
 > Informació sobre "markdown" extreta de --> [tutorialmarkdown.com](https://tutorialmarkdown.com/guia "markdown")
 
