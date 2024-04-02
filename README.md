@@ -10,7 +10,7 @@
 ---
 El contongut de l'arxiu "**example.xml**" del que s'extreu la informació durant l'activitat és el següent:
 
-```
+```xml
 <?xml version="1.0"?>
 <example>
     <company>OpenAI</company>
