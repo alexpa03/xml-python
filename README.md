@@ -32,33 +32,32 @@ El contongut de l'arxiu "**example.xml**" del que s'extreu la informació durant
 ---
 ## Procés
 
-En primer lloc importarem el mòdul "**minidom**" del paquet estandard de python "**xml.dom**".
-```
+1. En primer lloc importarem el mòdul "**minidom**" del paquet estandard de python "**xml.dom**".
+```py
 from xml.dom import minidom
 ```
-Definim la variable "**doc**" com a importació de l'arxiu "**example.xml**", del que extraurem les dades que volem passar a l'arxiu python.
-```
+2. Definim la variable "**doc**" com a importació de l'arxiu "**example.xml**", del que extraurem les dades que volem passar a l'arxiu python.
+```py
 doc=minidom.parse("Practica Minidom/example.xml")
 ```
-A continuació definim la vaiable "**tag_example**" per referenciar al document xml importat anteriorment. 
-```
+3. A continuació definim la vaiable "**tag_example**" per referenciar al document xml importat anteriorment. 
+```py
 tag_example=doc.documentElement
 ```
-Amb aquesta linia de codi estem afegint a la variable "**tag_people**" la funció de referenciar els elements del document "**example.xml**" que tinguin l'etiqueta "**people**".
-```
+4. Amb aquesta linia de codi estem afegint a la variable "**tag_people**" la funció de referenciar els elements del document "**example.xml**" que tinguin l'etiqueta "**people**".
+```py
 tag_people=tag_example.getElementsByTagName("people")[0]
 ```
-En aquest cas, referenciem els elements que pertanyen a l'etiqueta "**person**" mitjançant la definició d'aquesta nova variable "**llista_tag_person**". La variable "**tag_people**" està actuant d'etiqueta pare, de forma que s'està buscant el contingut que hi ha dins d'aquesta.
-```
+5. En aquest cas, referenciem els elements que pertanyen a l'etiqueta "**person**" mitjançant la definició d'aquesta nova variable "**llista_tag_person**". La variable "**tag_people**" està actuant d'etiqueta pare, de forma que s'està buscant el contingut que hi ha dins d'aquesta.
+```py
 lista_tag_person=tag_people.getElementsByTagName("person")
 ```
-Posteriorment, amb el "**for**" indiquem que es cerquin els elements dins del contingut que s'estableix en la variable "**llista_tag_person**". D'aquesta forma podrem realitzar certes accions amb aquests elements. 
-```
+6. Posteriorment, amb el "**for**" indiquem que es cerquin els elements dins del contingut que s'estableix en la variable "**llista_tag_person**". D'aquesta forma podrem realitzar certes accions amb aquests elements. 
+```py
 for tag_person in lista_tag_person:
 ```
-Finalment, realiztem el mateix process constantment definint diferents variables amb l'objectiu d'agafar dades que pertanyen a altres etiquetes pare i imprimir-les en pantalla.
-
-    
+7. Finalment, realiztem el mateix process constantment definint diferents variables amb l'objectiu d'agafar dades que pertanyen a altres etiquetes pare i imprimir-les en pantalla.
+```py
     tag_name=tag_person.getElementsByTagName("name")[0]
     valor_name=tag_name.firstChild.data
     valor_age=tag_person.getElementsByTagName("age")[0].firstChild.data
@@ -72,7 +71,8 @@ Finalment, realiztem el mateix process constantment definint diferents variables
     print(f"L'edat és {valor_age}")
     print(f"La data de naixement és {valor_naixement}")
     print("----------------------------------")
-   > Tot aquest contingut es localitza dins del "**for**" mencionat anteriorment. 
+```
+> Tot aquest contingut es localitza dins del "**for**" mencionat anteriorment.
 
 
 Com a resultat, el programa en python mostrarà les dades de les persones enregistrades en l'arxiu xml que hi ha al principi del document:
